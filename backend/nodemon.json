@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DB_USER": "tbapp",
+    "DB_PASSWORD": "tbapp123",
+    "DB_NAME": "tbapp",
+    "JWT_KEY": "secret"
+  }
+}
