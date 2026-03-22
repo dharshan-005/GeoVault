@@ -4,7 +4,7 @@ import Product from "./models/product.js";
 
 mongoose
   .connect(
-    "mongodb+srv://tbapp:tbapp123@travelblog.zgpzw7h.mongodb.net/products_test?appName=TravelBlog"
+    process.env.MONGO_DB_URL
   )
   .then(() => {
     console.log("Connected to MongoDB!");
