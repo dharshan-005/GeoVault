@@ -1,7 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const url =
-  "mongodb+srv://tbapp:tbapp123@travelblog.zgpzw7h.mongodb.net/products_test?appName=TravelBlog";
+const url = process.env.MONGO_DB_URL;
 
 const createProduct = async (req, res, next) => {
   const newProduct = {

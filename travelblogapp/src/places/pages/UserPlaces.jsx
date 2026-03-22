@@ -19,10 +19,25 @@ const UserPlaces = () => {
   // const userId = useParams().userId;
   // const {userId} = useParams();
 
+  // useEffect(() => {
+  //   if (!userId || userId === "undefined") {
+  //     return;
+  //   }
+
+  //   const fetchPlaces = async () => {
+  //     try {
+  //       const responseData = await sendRequest(
+  //         `${import.meta.env.VITE_BACKEND_URL}/places/user/${userId}`,
+  //       );
+  //       setLoadedPlaces(responseData.places);
+  //     } catch (err) {}
+  //   };
+
+  //   fetchPlaces();
+  // }, [sendRequest, userId]);
+
   useEffect(() => {
-    if (!userId || userId === "undefined") {
-      return;
-    }
+    if (!userId) return;
 
     const fetchPlaces = async () => {
       try {
@@ -35,18 +50,6 @@ const UserPlaces = () => {
 
     fetchPlaces();
   }, [sendRequest, userId]);
-
-  // useEffect(() => {
-  //   const fetchPlaces = async () => {
-  //     try {
-  //       const responseData = await sendRequest(
-  //         `http://localhost:5000/api/places/user/${userId}`
-  //       );
-  //       setLoadedPlaces(responseData.places);
-  //     } catch (err) {}
-  //   };
-  //   fetchPlaces();
-  // }, [sendRequest, userId]);
 
   const placeDeletedHandler = (deletedPlaceId) => {
     setLoadedPlaces((prevPlaces) =>

@@ -66,19 +66,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
 }
 
 body {
   margin: 0;
-  background: #4d4d4d;
+  background: #ffffff;
+  background-image: url("./assets/worldMap.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 /* .slide-in-left-enter {
